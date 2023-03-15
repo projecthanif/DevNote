@@ -8,9 +8,9 @@ $type=$_POST['type']??'';
 $mssg=$_POST['message']??'';
 
 // print('<pre>');
-// print $titleName;
-// print $time;
-// print $type;
+// print $titleName."</br>";
+// print $time."</br>";
+// print $type."</br>";
 // print $mssg;
 
 
@@ -19,23 +19,22 @@ if (!$conn) {
 } 
     
 $SQL = "INSERT INTO todo(todo_Name,todo_Mssg,todo_DATE,todo_title)
-         value('$titleName','$mssg',$time,'$type');
+         value('$titleName','$mssg','$time','$type');
+        -- value(?,?,?,?);
         ";
 
 $result=$conn->query($SQL);
 
 // $input=$conn->prepare($SQL);
 
-// $result=$input->bind_param('ssis',$titleName,$mssg,$time,$type);
+// $result=$input->bind_param('ssss',$titleName,$mssg,$time,$type);
 
 if($result){
 
-print('successfully');
+header('Location: ../index.php');
 
 }else{
 
 print"failed";}
-
-
 
 ?>

@@ -64,7 +64,6 @@ require_once('server/connect.php');
                             C - CREATE
                         </button>
                     </li>
-                    <!-------------------- /modal button for create--------------------->
 
                     <!---------------modal for create ------------------->
 
@@ -106,11 +105,7 @@ require_once('server/connect.php');
                         </div>
                     </div>
 
-                    <!--------------- /modal for create ------------------->
-
-                    <!------------- /Create----------------->
-
-                    <!------------- /Read----------------->
+                    <!------------- Read----------------->
 
                     <!-------------------- modal button for read--------------------->
 
@@ -119,15 +114,13 @@ require_once('server/connect.php');
                             R - READ
                         </button>
                     </li>
-                    <!-------------------- /modal button for read--------------------->
-
                     <!--------------- modal for read ------------------->
 
                     <div class="modal fade modal-fullscreen-lg-down" id="read">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <div class="modal-title">modal 1</div>
+                                    <div class="modal-title fw-bold">READ</div>
                                     <button class="btn btn-close" data-bs-dismiss="modal"></button>
                                 </div>
                                 <div class="card p-3">
@@ -152,27 +145,7 @@ require_once('server/connect.php');
                                                     Read</button>
                                             </div>
                                         </div>
-                                        <?php
-                                        $SQL = "SELECT todo_Name FROM todo";
-                                        $result = $conn->query($SQL);
-                                        if(mysqli_num_rows($result)>0){
-                                        for($i=0;$i<mysqli_num_rows($result);$i++){
-                                            $out = $result->fetch_assoc();
-                                            $title = $out['todo_Name'];
-                                        print("
-                                           <div class='card mb-4'>
-                                                <div class='card-body'>
-                                                   <h5 class='card-text fw-bold'>" . $title . "</h5><br>
-                                                   <button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#text2'>
-                                                    Read</button>
-                                                </div>
-                                            </div>
-                                            ");
-                                        }
-                                        }                                                  
-                                        
-                                        print " ";
-                                        ?>
+                                        <?php include('backend/read_list.php'); ?>
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +159,7 @@ require_once('server/connect.php');
                                     <div class="modal-title" id="read2">Modal 2</div>
                                 </div>
                                 <div class="modal-body">
-                                    <h4 class="modal-title fw-bold text-center" id="label1">Work on
+                                    <h4 class="modal-title fw-bold text-center">Work on
                                         perfecting the
                                         remaining work</h4>
                                     <p class="card-text">
@@ -209,22 +182,19 @@ require_once('server/connect.php');
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <div class="modal-title" id="read2">Modal 3</div>
+                                    <div class="modal-title" id="read2">Modal 2</div>
                                 </div>
                                 <div class="modal-body">
-                                    <h4 class="modal-title fw-bold text-center" id="label1">
-                                        <?php print $title ?>
-                                    </h4>
+                                    <h4 class="modal-title fw-bold text-center">Work on
+                                        perfecting the
+                                        remaining work</h4>
                                     <p class="card-text">
-                                        <?php
-                                        $SQL = " SELECT * FROM todo
-                                        WHERE todo_Name= '$title'";
-                                        $result = $conn->query($SQL);
-                                        if (mysqli_num_rows($result) > 0) {
-                                            $text = $result->fetch_assoc();
-                                            print $text['todo_Mssg'];
-                                        }
-                                        ?>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Quia delectus reprehenderit nemo, impedit ducimus officia
+                                        officiis,
+                                        esse possimus laudantium expedita vero? Quisquam, quam
+                                        asperiores.
+                                        Pariatur totam repudiandae facilis distinctio omnis!
                                     </p>
                                 </div>
                                 <div class="modal-footer">
@@ -234,10 +204,7 @@ require_once('server/connect.php');
                             </div>
                         </div>
                     </div>
-
-                    <!--------------- /modal for read ------------------->
-
-                    <!------------- /Read----------------->
+                    <?php include('backend/read.php') ?>
 
                     <!------------- Update----------------->
 
@@ -247,24 +214,25 @@ require_once('server/connect.php');
                             U - UPDATE
                         </button>
                     </li>
-                    <!-------------------- /modal button for update--------------------->
 
                     <!--------------- modal for update ------------------->
 
                     <div class="modal modal-fullscreen-lg-down" id="update">
                         <div class="modal-dialog">
                             <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="modal-text fw-bold">UPDATE</div>
+                                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                </div>
                                 <div class="card p-3">
                                     <div class="card-body">
+                                        <?php include('backend/update_list.php') ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!--------------- /modal for update ------------------->
-
-                    <!------------- /Update----------------->
+                    <?php include('backend/update.php') ?>
 
                     <!------------- Delete----------------->
 
@@ -274,24 +242,25 @@ require_once('server/connect.php');
                             D - DELETE
                         </button>
                     </li>
-                    <!-------------------- /modal button for delete--------------------->
 
                     <!--------------- modal for delete ------------------->
 
                     <div class="modal modal-fullscreen-lg-down" id="delete">
                         <div class="modal-dialog">
                             <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="modal-title fw-bold">Delete</div>
+                                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                </div>
                                 <div class="card p-3">
-                                    <div class="card-body"></div>
+                                    <div class="card-body">
+                                        <?php include('backend/delete.php') ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!--------------- /modal for delete ------------------->
-
-
-                    <!------------- /Delete----------------->
+                    <?php include('backend/delete_verification.php') ?>
 
                 </ul>
             </div>
