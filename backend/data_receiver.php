@@ -7,13 +7,6 @@ $time=$_POST['time']??'';
 $type=$_POST['type']??'';
 $mssg=$_POST['message']??'';
 
-// print('<pre>');
-// print $titleName."</br>";
-// print $time."</br>";
-// print $type."</br>";
-// print $mssg;
-
-
 if (!$conn) {
     print 'connection failed due to: ' . $conn->error;
 } 
