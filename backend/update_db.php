@@ -1,7 +1,8 @@
 <?php
 
 require_once('../server/connect.php');
-
+if($_SERVER['REQUEST_METHOD']=='POST'){
+    
 $titleName = $_POST['title'] ?? '';
 $time = $_POST['time'] ?? '';
 $type = $_POST['type'] ?? '';
@@ -26,5 +27,8 @@ if ($conn->query($SQL) === true) {
 
     print "failed";
 }
+
+}
+header('Location: index.php');
 
 ?>

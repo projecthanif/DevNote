@@ -2,6 +2,9 @@
 
 require_once('../server/connect.php');
 
+
+if($_SERVER['REQUEST_METHOD']=='POST'){
+    
 $titleName=$_POST['title']??'';
 $time=$_POST['time']??'';
 $type=$_POST['type']??'';
@@ -29,5 +32,8 @@ header('Location: ../index.php');
 }else{
 
 print"failed";}
+
+}
+header('Location: ../index.php');
 
 ?>
