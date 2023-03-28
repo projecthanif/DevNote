@@ -29,6 +29,6 @@ if ($conn->query($SQL) === true) {
 }
 
 }
-header('Location: index.php');
+header('Location: ../index.php');
 
 ?>

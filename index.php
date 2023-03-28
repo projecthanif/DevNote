@@ -13,6 +13,8 @@ require_once('server/connect.php');
     <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <link rel="stylesheet" href="bootstrap-5.3.0-alpha1/dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="bootstrap-5.3.0-alpha1/dist/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Todo list</title>
 </head>
@@ -145,38 +147,7 @@ require_once('server/connect.php');
                                                     Read</button>
                                             </div>
                                         </div>
-                                        <?php //include('backend/read_list.php'); 
-                                        
-                                        $SQL = "SELECT todo_Name FROM todo";
-
-                                        $result = $conn->query($SQL);
-
-                                        if (mysqli_num_rows($result) > 0) {
-
-                                            for ($i = 0; $i < mysqli_num_rows($result); $i++) {
-
-                                                $out = $result->fetch_assoc();
-
-                                                $title = $out['todo_Name'];
-                                                $explode = explode(' ', $title);
-                                                $idvalue = "read" . end($explode);
-
-                                                print("
-                <div class='card mb-4'>
-                    <div class='card-body'>
-                            <h5 class='card-text fw-bold'>" . $title . "</h5><br>
-                            <input name='name' type='text' hidden value='$title'>
-                            <button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#" . $idvalue . "'>
-                                Read
-                            </button>
-                    </div>
-                </div>
-            ");
-                                            }
-                                        }
-
-
-                                        ?>
+                                        <?php include('modal/read_modal.php');  ?>
                                     </div>
                                 </div>
                             </div>
@@ -235,44 +206,7 @@ require_once('server/connect.php');
                             </div>
                         </div>
                     </div>
-                    <?php //include('backend/read.php') 
-                    $name = $_POST['name'] ?? '';
-
-                    $SQL = " SELECT * FROM todo";
-
-                    $result = $conn->query($SQL);
-
-                    if ($num = mysqli_num_rows($result) > 0) {
-                        for ($loop = 0; $loop < mysqli_num_rows($result); $loop++) {
-
-                            $text = $result->fetch_assoc();
-
-                            $explode = explode(' ', $text['todo_Name']);
-                            $id = "read" . end($explode);
-
-                            print "<div class='modal fade' id='" . $id . "'>
-                                        <div class='modal-dialog'>
-                                            <div class='modal-content'>
-                                                <div class='modal-header'>
-                                                     <div class='modal-title'>Modal 3</div>
-                                                </div>
-                                                <div class='modal-body'>
-                                                    <h4 class='modal-title fw-bold text-center'>" . $text['todo_Name'] . "</h4>
-                                                    <p class='card-text'>" .
-                                $text['todo_Mssg'] . "
-                                                    </p>
-                                                </div>
-                                                <div class='modal-footer'>
-                                                    <button class='btn btn-warning' data-bs-toggle='modal'
-                                                        data-bs-dismiss='modal'> back
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>";
-                        }
-                    }
-                    ?>
+                    <?php include('modal/read.php') ?>
 
                     <!------------- Update----------------->
 
@@ -294,97 +228,13 @@ require_once('server/connect.php');
                                 </div>
                                 <div class="card p-3">
                                     <div class="card-body">
-                                        <?php //include('backend/update_list.php') 
-                                        $SQL = "SELECT todo_Name FROM todo";
-
-                                        $result = $conn->query($SQL);
-
-                                        if (mysqli_num_rows($result) > 0) {
-
-                                            for ($i = 0; $i < mysqli_num_rows($result); $i++) {
-
-                                                $out = $result->fetch_assoc();
-
-                                                $title = $out['todo_Name'];
-                                                $explode = explode(' ', $title);
-                                                $idvalue = "update" . end($explode);
-
-                                                print("
-                                                        <div class='card mb-4'>
-                                                            <div class='card-body'>
-                                                                    <h5 class='card-text fw-bold'>" . $title . "</h5><br>
-                                                                    <input name='name' type='text' hidden value='$title'>
-                                                                    <button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#" . $idvalue . "'>
-                                                                        UPDATE
-                                                                    </button>
-                                                            </div>
-                                                        </div>
-                                                    ");
-                                            }
-                                        }
-
-                                        ?>
+                                        <?php include('modal/update_modal.php') ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <?php //include('backend/update.php') 
-                    $name = $_POST['name'] ?? '';
-
-                    $SQL = " SELECT * FROM todo";
-
-                    $result = $conn->query($SQL);
-
-                    if ($num = mysqli_num_rows($result) > 0) {
-                        for ($loop = 0; $loop < mysqli_num_rows($result); $loop++) {
-
-                            $text = $result->fetch_assoc();
-
-                            $explode = explode(' ', $text['todo_Name']);
-                            $id = "update" . end($explode);
-
-                            print "<div class='modal fade' id='" . $id . "'>
-                                        <div class='modal-dialog'>
-                                            <div class='modal-content'>
-                                                <div class='modal-header'>
-                                                    <div class='modal-title'>Modal 3</div>
-                                                </div>
-                                                <div class='modal-body'>
-                                                    <form action='backend/update_db.php' method='post'>
-                                                        <div class='form-group'>
-                                                            <label for='title'>Title
-                                                                <input type='text' name='title' value='" . $text['todo_Name'] . "' class='form-control'>
-                                                            </label>
-                                                            <label for='time'>Time
-                                                                <input type='date' name='time' id='' class='form-control'>
-                                                            </label>
-                                                            <label for='type'>Type
-                                                                <select name='type' id='type' class='form-select'>
-                                                                    <option value=''>Select</option>
-                                                                    <option value='important'>Important</option>
-                                                                    <option value='work'>Work</option>
-                                                                    <option value='errands'>Errands</option>
-                                                                </select>
-                                                            </label>
-                                                        </div>
-                                                        <div class='form-group mb-3'>
-                                                            <label for='message'>message</label>
-                                                            <textarea name='message' cols='30' rows='10' class='form-control'>
-                                                            </textarea>
-                                                        </div>
-                                                        <button type='submit' class='btn btn-primary' value='create'>SAVE</button>
-                                                        <button type='button' class='btn btn-danger float-end'
-                                                            data-bs-dismiss='modal'>Cancel</button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>";
-                        }
-                    }
-
-                    ?>
+                    <?php include('modal/update.php') ?>
 
                     <!------------- Delete----------------->
 
@@ -406,93 +256,24 @@ require_once('server/connect.php');
                                 </div>
                                 <div class="card p-3">
                                     <div class="card-body">
-                                        <?php //include('backend/delete.php') 
-                                        
-                                        $SQL = "SELECT todo_Name FROM todo";
-
-                                        $result = $conn->query($SQL);
-
-                                        if (mysqli_num_rows($result) > 0) {
-
-                                            for ($i = 0; $i < mysqli_num_rows($result); $i++) {
-
-                                                $out = $result->fetch_assoc();
-
-                                                $title = $out['todo_Name'];
-                                                $explode = explode(' ', $title);
-                                                $idvalue = "delete" . end($explode);
-
-                                                print("
-                <div class='card mb-4'>
-                    <div class='card-body'>
-                            <h5 class='card-text fw-bold'>" . $title . "</h5><br>
-                            <input name='name' type='text' hidden value='$title'>
-                            <button class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#" . $idvalue . "'>
-                                DELETE
-                            </button>
-                    </div>
-                </div>
-            ");
-                                            }
-                                        }
-
-
-                                        ?>
+                                        <?php include('modal/delete.php')  ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <?php //include('backend/delete_verification.php') 
-                    
-                    $name = $_POST['name'] ?? '';
-
-                    $SQL = " SELECT * FROM todo";
-
-                    $result = $conn->query($SQL);
-
-                    if ($num = mysqli_num_rows($result) > 0) {
-                        for ($loop = 0; $loop < mysqli_num_rows($result); $loop++) {
-
-                            $text = $result->fetch_assoc();
-                            $dName = $text['todo_Name'];
-                            $explode = explode(' ', $text['todo_Name']);
-                            $id = "delete" . end($explode);
-
-                            print "<div class='modal fade' id='" . $id . "'>
-                    <div class='modal-dialog'>
-                        <div class='modal-content'>
-                            <div class='modal-header'>
-                                <div class='modal-title'>Modal 3</div>
-                            </div>
-                            <div class='modal-body'>
-                                <form action='backend/delete_db.php' method='post'>
-                                    <div class='form-group'>
-                                        <h3 class='modal-title text-center mb-3'>Are you sure</h3>
-                                        <input hidden value='" . $dName . "' name='dname'>
-                                        <button type='submit' class='btn btn-danger' value='create'>DELETE</button>
-                                        <button 
-                                            type='button' 
-                                            data-bs-dismiss='modal'
-                                            class='btn btn-primary float-end'
-                                        >Cancel</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>";
-
-                        }
-                    }
-                    ?>
+                    <?php include('modal/delete.php')  ?>
 
                 </ul>
             </div>
         </div>
     </div>
 
+
     <script src="app.js"></script>
+    <script src="bootstrap-5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.3.0-alpha1/dist/js/bootstrap.js"></script>
+    <script src="bootstrap-5.3.0-alpha1/dist/js/bootstrap.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
