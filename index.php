@@ -256,7 +256,7 @@ require_once('server/connect.php');
                                 </div>
                                 <div class="card p-3">
                                     <div class="card-body">
-                                        <?php include('modal/delete.php')  ?>
+                                        <?php include('modal/delete_modal.php')  ?>
                                     </div>
                                 </div>
                             </div>
