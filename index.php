@@ -11,10 +11,7 @@ require_once('server/connect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-     <link rel="stylesheet" href="bootstrap-5.3.0-alpha1/dist/css/bootstrap.min.css">
-     <link rel="stylesheet" href="bootstrap-5.3.0-alpha1/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Todo list</title>
 </head>
@@ -147,7 +144,7 @@ require_once('server/connect.php');
                                                     Read</button>
                                             </div>
                                         </div>
-                                        <?php include('modal/read_modal.php');  ?>
+                                        <?php include('modal/read_modal.php'); ?>
                                     </div>
                                 </div>
                             </div>
@@ -256,13 +253,13 @@ require_once('server/connect.php');
                                 </div>
                                 <div class="card p-3">
                                     <div class="card-body">
-                                        <?php include('modal/delete_modal.php')  ?>
+                                        <?php include('modal/delete_modal.php') ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <?php include('modal/delete.php')  ?>
+                    <?php include('modal/delete.php') ?>
 
                 </ul>
             </div>
@@ -271,11 +268,7 @@ require_once('server/connect.php');
 
 
     <script src="app.js"></script>
-    <script src="bootstrap-5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <script src="bootstrap-5.3.0-alpha1/dist/js/bootstrap.js"></script>
-    <script src="bootstrap-5.3.0-alpha1/dist/js/bootstrap.bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
