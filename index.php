@@ -45,7 +45,7 @@ require_once('server/connect.php');
             </li>
         </ul>
     </nav>
-    <div class="container-fuild p-3 my-5">
+    <div class="container-fluid p-3 my-5">
         <div class="card p-3">
             <h3 class="text-center fw-bold">TO DO</h3>
 
