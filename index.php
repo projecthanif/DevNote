@@ -91,7 +91,7 @@ require_once('server/connect.php');
                                             </label>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <label for="message">message</label>
+                                            <label for="message">Message</label>
                                             <textarea name="message" id="" cols="30" rows="10" class="form-control">
                                             </textarea>
                                         </div>
