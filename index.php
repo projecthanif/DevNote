@@ -1,5 +1,7 @@
 <?php
-require_once('server/connect.php');
+require('server/connect.php');
+require('validation/redirection.php');
+session_start();
 
 ?>
 
@@ -49,6 +51,9 @@ require_once('server/connect.php');
     <div class="container-fluid p-3 my-5">
         <div class="card p-3">
             <h3 class="text-center fw-bold">TO DO</h3>
+            <h4>
+                <?= $_SESSION['name'] ?>
+            </h4>                        
 
             <div class="table-group-divider mb-2"></div>
 

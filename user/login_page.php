@@ -10,7 +10,7 @@
 
     <main>
         <div class="container-form">
-            <form action="../backend/login_validate.php" method="post" name="myForm">
+            <form action="../validation/login_validate.php" method="post" name="myForm">
                 <div class="card">
                     <div class="card-head">
                         <h1 class="card-text" id="title">
@@ -32,7 +32,7 @@
                             <input type="submit" value="Login" id="submit" class="btn" onsubmit="validate()">
                         </legend> 
                         <p class="register">
-                            You don't have an account we got you covered register <a href="register_page.html">here</a>
+                            You don't have an account we got you covered register <a href="register_page.php">here</a>
                         </p>
                     </div>
                 </div>
