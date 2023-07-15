@@ -8,8 +8,8 @@ $result = $conn->query($SQL);
 
 if ($num = mysqli_num_rows($result) > 0) {
     for ($loop = 0; $loop < mysqli_num_rows($result); $loop++) {
-
         $text = $result->fetch_assoc();
+
 
         $explode = explode(' ', $text['todo_Name']);
         $id = "read" . end($explode);
