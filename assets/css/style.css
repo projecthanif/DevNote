@@ -46,6 +46,9 @@ main{
 .header{
     background-color: white;
     padding: 20px;
+}
+.nav-tabs{
     border-bottom: 2px solid rgb(215, 207, 207) ;
+
 }
 
