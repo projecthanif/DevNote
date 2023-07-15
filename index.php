@@ -1,6 +1,5 @@
 <?php
 require('server/connect.php');
-require('validation/redirection.php');
 session_start();
 
 ?>
@@ -51,9 +50,11 @@ session_start();
     <div class="container-fluid p-3 my-5">
         <div class="card p-3">
             <h3 class="text-center fw-bold">TO DO</h3>
+            <?php if($_SESSION) :?>
             <h4>
                 <?= $_SESSION['name'] ?>
-            </h4>                        
+            </h4>
+            <?php endif ?>                        
 
             <div class="table-group-divider mb-2"></div>
 
