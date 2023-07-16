@@ -56,3 +56,17 @@ main{
     background-color: white;
     padding: 20px;
 }
+
+/** Title Head */
+#title-header{
+    border-bottom: 1px solid grey;
+    margin-bottom: 20px;
+}
+
+/** Title Body */
+#card{
+    background-color: rgb(245, 239, 239);
+    padding: 20px;
+    border-radius: 9px;
+    height: 40vh;
+}
