@@ -55,6 +55,15 @@ main{
 .header{
     background-color: white;
     padding: 20px;
+    position: fixed;
+    width: 80%;
+    top: 0;
+    right: -10px;
+    z-index: 1;
+}
+
+#body{
+    margin-top: 14%;
 }
 
 /** Title Head */
