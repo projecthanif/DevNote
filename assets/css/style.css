@@ -30,13 +30,19 @@ aside{
 }
 .nav-item{
     margin-top: 7px;
-    font-size: 2.8vh;
+    font-size: 2.2vh;
     color: aliceblue;
 }
 .nav-item,a.nav-link{
     color: black;
 
 }
+
+/* #Btncrt{
+    position: fixed;
+    left: 100px;
+    bottom: 50px;
+} */
 
 /** MAIN */
 main{
