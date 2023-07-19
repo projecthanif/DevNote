@@ -62,14 +62,14 @@ main{
     z-index: 1;
 }
 
-#body{
+.main.body{
     margin-top: 14%;
 }
 
 /** Title Head */
 #title-header{
     border-bottom: 1px solid grey;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 /** Title Body */
