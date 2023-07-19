@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="free/css/all.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="x/icon" href="assets/image/cc-primary.png">
-    <title>Todo</title>
+    <title>DevNote.</title>
 </head>
 
 <body class="bg-light">
@@ -29,26 +29,26 @@
                 </li>
                 <li class="nav-item" id="mt-5">
                     <a href="#" class="nav-link">
-                        <i class="fas fa-inbox"></i>
-                        Inbox
+                        <i class="fa-solid fa-border-all"></i>
+                        All
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="fa fa-star"></i>
+                        <i class="fa-regular fa-calendar"></i>
                         Today
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="fa fa-pager"></i>
-                        Upcoming
+                        <i class="fa-regular fa-clock"></i>
+                        Scheduled
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="fa-solid fa-check"></i>
-                        Completed
+                        Done
                     </a>
                 </li>
 
@@ -105,125 +105,131 @@
                     </li>
                 </ul>
             </div>
-            <div class="container p-3" id="body">
-                <div id="title-header">
-                    <div class="d-flex justify-content-between p-2">
-                        <h3 class="fst-3 mx-5">
-                            Product Planning
-                        </h3>
-                        <div class="dropdown">
-                            <button type="button" class="btn" data-bs-toggle="dropdown">
-                                <i class="fa-solid fa-ellipsis"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-item">
-                                    Create
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div id="title-body">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-4 col-lg-4">
-                            <div id="card">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="fs-6">Just Now</h5>
-                                    <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
-                                </div>
-                                <h3 class="fs-3 mt-2">
-                                    Brainstorming
+            <div id="accordion">
+                <div class="container p-3" id="body">
+                    <div id="title-header">
+                        <div class="d-flex justify-content-between p-2">
+                            <a href="#collapseOne" class="btn" data-bs-toggle="collapse">
+                                <h3 class="fst-3 mx-5">
+                                    Product Planning
                                 </h3>
-                                <div class="mt-1" id="card-body">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Molestias sit quas
-                                    distinctio modi odit. Voluptas expedita
-                                    blanditiis esse placeat?
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4">
-                            <div id="card">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="fs-6">2 Months ago</h5>
-                                </div>
-                                <h3 class="fs-3 mt-2">
-                                    DevNote. Project Building
-                                </h3>
-                                <div class="mt-1" id="card-body">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Molestias sit quas
-                                    distinctio modi odit. Voluptas expedita
-                                    blanditiis esse placeat?
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4">
-                            <div id="card">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="fs-6">Just Now</h5>
-                                    <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
-                                </div>
-                                <h3 class="fs-3 mt-2">
-                                    Brainstorming
-                                </h3>
-                                <div class="mt-1" id="card-body">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Molestias sit quas
-                                    distinctio modi odit. Voluptas expedita
-                                    blanditiis esse placeat?
-                                </div>
+                            </a>
+                            <div class="dropdown">
+                                <button type="button" class="btn" data-bs-toggle="dropdown">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item">
+                                        Create
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-5">
-                        <div class="col-sm-12 col-md-4 col-lg-4">
-                            <div id="card">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="fs-6">Just Now</h5>
-                                    <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
+                    <div class="collapse show" id="collapseOne" data-bs-parent="#accordion">
+                        <div id="title-body">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div id="card">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="fs-6">Just Now</h5>
+                                            <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
+                                        </div>
+                                        <h3 class="fs-3 mt-2">
+                                            Brainstorming
+                                        </h3>
+                                        <div class="mt-1" id="card-body">
+                                            Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Molestias sit quas
+                                            distinctio modi odit. Voluptas expedita
+                                            blanditiis esse placeat?
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 class="fs-3 mt-2">
-                                    Brainstorming
-                                </h3>
-                                <div class="mt-1" id="card-body">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Molestias sit quas
-                                    distinctio modi odit. Voluptas expedita
-                                    blanditiis esse placeat?
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div id="card">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="fs-6">2 Months ago</h5>
+                                        </div>
+                                        <h3 class="fs-3 mt-2">
+                                            DevNote. Project Building
+                                        </h3>
+                                        <div class="mt-1" id="card-body">
+                                            Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Molestias sit quas
+                                            distinctio modi odit. Voluptas expedita
+                                            blanditiis esse placeat?
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div id="card">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="fs-6">Just Now</h5>
+                                            <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
+                                        </div>
+                                        <h3 class="fs-3 mt-2">
+                                            Brainstorming
+                                        </h3>
+                                        <div class="mt-1" id="card-body">
+                                            Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Molestias sit quas
+                                            distinctio modi odit. Voluptas expedita
+                                            blanditiis esse placeat?
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4">
-                            <div id="card">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="fs-6">2 Months ago</h5>
+                            <div class="row mt-5">
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div id="card">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="fs-6">Just Now</h5>
+                                            <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
+                                        </div>
+                                        <h3 class="fs-3 mt-2">
+                                            Brainstorming
+                                        </h3>
+                                        <div class="mt-1" id="card-body">
+                                            Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Molestias sit quas
+                                            distinctio modi odit. Voluptas expedita
+                                            blanditiis esse placeat?
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 class="fs-3 mt-2">
-                                    DevNote. Project Building
-                                </h3>
-                                <div class="mt-1" id="card-body">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Molestias sit quas
-                                    distinctio modi odit. Voluptas expedita
-                                    blanditiis esse placeat?
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div id="card">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="fs-6">2 Months ago</h5>
+                                        </div>
+                                        <h3 class="fs-3 mt-2">
+                                            DevNote. Project Building
+                                        </h3>
+                                        <div class="mt-1" id="card-body">
+                                            Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Molestias sit quas
+                                            distinctio modi odit. Voluptas expedita
+                                            blanditiis esse placeat?
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4">
-                            <div id="card">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="fs-6">Just Now</h5>
-                                    <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
-                                </div>
-                                <h3 class="fs-3 mt-2">
-                                    Brainstorming
-                                </h3>
-                                <div class="mt-1" id="card-body">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Molestias sit quas
-                                    distinctio modi odit. Voluptas expedita
-                                    blanditiis esse placeat?
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div id="card">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="fs-6">Just Now</h5>
+                                            <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
+                                        </div>
+                                        <h3 class="fs-3 mt-2">
+                                            Brainstorming
+                                        </h3>
+                                        <div class="mt-1" id="card-body">
+                                            Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Molestias sit quas
+                                            distinctio modi odit. Voluptas expedita
+                                            blanditiis esse placeat?
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
