@@ -26,7 +26,7 @@ aside{
     position: fixed;
 }
 #mt-5{
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 .nav-item{
     margin-top: 7px;
@@ -38,16 +38,23 @@ aside{
 
 }
 
-/* #Btncrt{
-    position: fixed;
-    left: 100px;
-    bottom: 50px;
-} */
+@media screen and (max-width : 450px) {
+    aside#nav-column{
+        display: none;
+    }
+}
+
 
 /** MAIN */
 main{
     margin-left:20%;
     /* margin-top: 2%; */
+}
+
+@media screen and (max-width : 450px) {
+    main{
+        margin-left: 0%;
+    }
 }
 
 /** HEADER */
@@ -62,8 +69,43 @@ main{
     z-index: 1;
 }
 
+#sidebar {
+    /* display: none; */
+}
+
+
 .main.body{
     margin-top: 14%;
+}
+
+
+
+@media screen and (max-width : 450px) {
+    .header {
+        right: 0px;
+        width: 100%;
+    }
+    .main.body {
+        margin-top: 30%;
+    }
+    #time .nav-item {
+        width: 25%;
+    }
+    #list {
+        width: 70%;
+    }
+    #list .nav-item {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:500px ) {
+    #list {
+        width: 25%;
+    }
+    #sidebar {
+        display: none;
+    }
 }
 
 /** Title Head */
