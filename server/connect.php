@@ -7,7 +7,7 @@ define('DATABASE_NAME', 'todo');
 
 $conn = mysqli_connect(HOST_NAME,USER_NAME,PASSWORD,DATABASE_NAME);
 
-if(mysqli_connect_error()){
-    die("Connection failed");
+if(!$conn){
+    die("Connection failed : ");
 }
 ?>
