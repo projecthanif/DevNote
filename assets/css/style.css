@@ -38,7 +38,7 @@ aside{
 
 }
 
-@media screen and (max-width : 450px) {
+@media screen and (max-width : 480px) {
     aside#nav-column{
         display: none;
     }
@@ -51,7 +51,7 @@ main{
     /* margin-top: 2%; */
 }
 
-@media screen and (max-width : 450px) {
+@media screen and (max-width : 480px) {
     main{
         margin-left: 0%;
     }
@@ -80,7 +80,7 @@ main{
 
 
 
-@media screen and (max-width : 450px) {
+@media screen and (max-width : 480px) {
     .header {
         right: 0px;
         width: 100%;
