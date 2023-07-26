@@ -26,7 +26,7 @@ aside{
     position: fixed;
 }
 #mt-5{
-    /* margin-top: 50px; */
+    margin-top: 50px;
 }
 .nav-item{
     margin-top: 7px;
@@ -70,15 +70,14 @@ main{
 }
 
 #sidebar {
-    /* display: none; */
+    display: flex;
+    justify-content: space-around;
 }
 
 
 .main.body{
     margin-top: 14%;
 }
-
-
 
 @media screen and (max-width : 480px) {
     .header {
@@ -99,7 +98,7 @@ main{
     }
 }
 
-@media screen and (min-width:500px ) {
+@media screen and (min-width:480px ) {
     #list {
         width: 25%;
     }
