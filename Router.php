@@ -16,12 +16,7 @@ class Route
 }
 
 
-$path = [
-    '/' => 'controllers/index.php',
-    '/all' => 'controllers/all.php',
-    '/today' => 'controllers/today.php',
-    '/done' => 'controllers/done.php'
-];
+$path = require('routes.php');
 
 
 
