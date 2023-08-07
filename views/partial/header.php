@@ -34,12 +34,34 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h3 class="fw-bold">CREATE YOUR LIST OF Work</h3>
                         </div>
-                        <div class="modal-body">
-                            <form action="/create" method="post">
-                                
+                        <div class="modal-body p-5">
+                            <form action="backend/data_receiver.php" method="post">
+                                <div class="form-group">
+                                    <label for="title">Title
+                                        <input type="text" name="title" id="" class="form-control" required>
+                                    </label>
+                                    <label for="time">Time
+                                        <input type="date" name="time" id="" class="form-control">
+                                    </label>
+                                    <label for="type">Type
+                                        <select name="type" id="type" class="form-select">
+                                            <option value="">Select</option>
+                                            <option value="important">Important</option>
+                                            <option value="work">Work</option>
+                                            <option value="errands">Errands</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="" cols="30" rows="10" class="form-control">
+                                            </textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary" value="create">Create</button>
+                                <button type="button" class="btn btn-danger float-end"
+                                    data-bs-dismiss="modal">Cancel</button>
                             </form>
                         </div>
                         <div class="modal-footer">
