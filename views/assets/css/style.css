@@ -67,7 +67,7 @@ main{
     width: 80%;
     top: 0;
     right: -10px;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 #sidebar {

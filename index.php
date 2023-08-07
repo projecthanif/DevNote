@@ -3,11 +3,5 @@
 
 require 'function.php';
 require 'Router.php';
+// dd($_SERVER);
 require $routePath;
-
-// $config = (require 'config.php');
-
-// require 'Database.php';
-// $database = new Database($config['database']);
-
-// dd($database->query("Select * from test"));

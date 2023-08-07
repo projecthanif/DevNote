@@ -14,7 +14,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="today" class="nav-link">
+            <a href="/today" class="nav-link">
                 <i class="fa-regular fa-calendar"></i>
                 Today
             </a>

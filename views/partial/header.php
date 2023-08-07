@@ -22,24 +22,30 @@
                     <a href="#" class="nav-link">Links</a>
                 </li>
             </ul>
-            <div class="dropdown">
-                <button type="button" class="btn" data-bs-toggle="dropdown">
-                    <i class="fa-solid fa-ellipsis"></i>
-                </button>
-                <ul class="dropdown-menu">
-                    <li class="dropdown-item">
-                        <a href="#" class="nav-link active">All</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#" class="nav-link">1D</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#" class="nav-link">7D</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#" class="nav-link">1M</a>
-                    </li>
-                </ul>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
