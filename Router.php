@@ -21,6 +21,7 @@ $path = require('routes.php');
 
 
 $url = parse_url($_SERVER["REQUEST_URI"])["path"];
+// dd($url);
 
 
 $route = new Route();
