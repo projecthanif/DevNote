@@ -1,356 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="free/css/all.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="x/icon" href="assets/image/cc-primary.png">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="free/css/all.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="x/icon" href="assets/image/cc-primary.png" />
     <title>DevNote.</title>
-</head>
+  </head>
 
-<body class="bg-light">
-
+  <body class="bg-light">
     <!------------------SIDE NAV---------------------------->
     <div class="container-fluid">
-        <aside id="nav-column">
-            <ul class="nav flex-column">
-                <li class="nav-header mb-3 fst-italic">
-                    <a href="index.html" class="nav-link">
-                        <h2>
-                            DevNote.
-                        </h2>
-                    </a>
-                </li>
-                <li class="nav-item" id="mt-5">
-                    <a href="#" class="nav-link">
-                        <i class="fa-solid fa-border-all"></i>
-                        All
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fa-regular fa-calendar"></i>
-                        Today
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fa-regular fa-clock"></i>
-                        Scheduled
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fa-solid fa-check"></i>
-                        Done
-                    </a>
-                </li>
+      <aside id="nav-column">
+        <ul class="nav flex-column">
+          <li class="nav-header mb-3 fst-italic">
+            <a href="index.html" class="nav-link">
+              <h2>DevNote.</h2>
+            </a>
+          </li>
+          <li class="nav-item" id="mt-5">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-border-all"></i>
+              All
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-regular fa-calendar"></i>
+              Today
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-regular fa-clock"></i>
+              Scheduled
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-check"></i>
+              Done
+            </a>
+          </li>
 
-                <ul class="nav project">
-                    <h5 class="mt-5 mx-5 text-black-50">PROJECTS</h5>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fa-solid fa-bars"></i>
-                            Ongoing project
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav">
-                    <h5 class="mt-5 mx-5 text-black-50">PERSONAL</h5>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fa-solid fa-bars"></i>
-                            Ongoing project
-                        </a>
-                    </li>
-                </ul>
+          <ul class="nav project">
+            <h5 class="mt-5 mx-5 text-black-50">PROJECTS</h5>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa-solid fa-bars"></i>
+                Ongoing project
+              </a>
+            </li>
+          </ul>
+          <ul class="nav">
+            <h5 class="mt-5 mx-5 text-black-50">PERSONAL</h5>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa-solid fa-bars"></i>
+                Ongoing project
+              </a>
+            </li>
+          </ul>
+        </ul>
+      </aside>
+      <main>
+        <div class="header w-100">
+          <div class="d-flex justify-content-between">
+            <h1 class="title-header mb-3 fst-italic" id="title">DevNote.</h1>
+            <div id="sidebar">
+              <button class="btn btn-primary">
+                <div class="fa fa-bars fa-1x"></div>
+              </button>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <ul class="nav nav-pills nav-justified bg-white" id="list">
+              <li class="nav-item">
+                <a href="#" class="nav-link active">Todo</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Notes</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Links</a>
+              </li>
             </ul>
-        </aside>
-        <main>
-            <div class="header">
-                <div class="d-flex justify-content-between">
-                    <h1 class="title-header mb-3 fst-italic" id="title">
-                        DevNote.
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+              tabindex="-1"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Modal title
                     </h1>
-                    <div id="sidebar">
-                        <button class="btn btn-primary">
-                            <div class="fa fa-bars fa-1x"></div>
-                        </button>
-                    </div>
-                    <!-- <ul class="nav nav-pills nav-justified" id="time">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">All</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">1D</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">7D</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">1M</a>
-                        </li>
-                    </ul> -->
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">...</div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Save changes
+                    </button>
+                  </div>
                 </div>
-                <div class="d-flex justify-content-between">
-                    <ul class="nav nav-pills nav-justified bg-white" id="list">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">Todo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Notes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Links</a>
-                        </li>
-                    </ul>
-                    <div class="dropdown">
-                        <button type="button" class="btn" data-bs-toggle="dropdown">
-                            <i class="fa-solid fa-ellipsis"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a href="#" class="nav-link active">All</a>
-                            </li>
-                            <li class="dropdown-item">
-                                <a href="#" class="nav-link">1D</a>
-                            </li>
-                            <li class="dropdown-item">
-                                <a href="#" class="nav-link">7D</a>
-                            </li>
-                            <li class="dropdown-item">
-                                <a href="#" class="nav-link">1M</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div id="accordion" class="main body">
-                <!-- FIRST -->
-                <div class="container p-3">
-                    <div id="title-header">
-                        <div class="d-flex justify-content-between p-2">
-                            <a href="#plan" class="btn" data-bs-toggle="collapse">
-                                <h3 class="fst-3">
-                                    Product Planning
-                                </h3>
-                            </a>
-                            <div class="dropdown">
-                                <button type="button" class="btn" data-bs-toggle="dropdown">
-                                    <i class="fa-solid fa-ellipsis"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-item">
-                                        Create
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse" id="plan" data-bs-parent="#accordion">
-                        <div id="title-body">
-                            <div class="row mt-3">
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div id="card">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="fs-6">Just Now</h5>
-                                            <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
-                                        </div>
-                                        <h3 class="fs-3 mt-2">
-                                            Brainstorming
-                                        </h3>
-                                        <div class="mt-1" id="card-body">
-                                            Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Molestias sit quas
-                                            distinctio modi odit. Voluptas expedita
-                                            blanditiis esse placeat?
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div id="card">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="fs-6">2 Months ago</h5>
-                                        </div>
-                                        <h3 class="fs-3 mt-2">
-                                            DevNote. Project Building
-                                        </h3>
-                                        <div class="mt-1" id="card-body">
-                                            Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Molestias sit quas
-                                            distinctio modi odit. Voluptas expedita
-                                            blanditiis esse placeat?
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div id="card">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="fs-6">Just Now</h5>
-                                            <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
-                                        </div>
-                                        <h3 class="fs-3 mt-2">
-                                            Brainstorming
-                                        </h3>
-                                        <div class="mt-1" id="card-body">
-                                            Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Molestias sit quas
-                                            distinctio modi odit. Voluptas expedita
-                                            blanditiis esse placeat?
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mt-5">
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div id="card">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="fs-6">Just Now</h5>
-                                            <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
-                                        </div>
-                                        <h3 class="fs-3 mt-2">
-                                            Brainstorming
-                                        </h3>
-                                        <div class="mt-1" id="card-body">
-                                            Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Molestias sit quas
-                                            distinctio modi odit. Voluptas expedita
-                                            blanditiis esse placeat?
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div id="card">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="fs-6">2 Months ago</h5>
-                                        </div>
-                                        <h3 class="fs-3 mt-2">
-                                            DevNote. Project Building
-                                        </h3>
-                                        <div class="mt-1" id="card-body">
-                                            Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Molestias sit quas
-                                            distinctio modi odit. Voluptas expedita
-                                            blanditiis esse placeat?
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div id="card">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="fs-6">Just Now</h5>
-                                            <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
-                                        </div>
-                                        <h3 class="fs-3 mt-2">
-                                            Brainstorming
-                                        </h3>
-                                        <div class="mt-1" id="card-body">
-                                            Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Molestias sit quas
-                                            distinctio modi odit. Voluptas expedita
-                                            blanditiis esse placeat?
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+        </div>
+        <div id="accordion" class="main body">
+          <!-- FIRST -->
+          <div class="container p-3">
+            <div id="title-header">
+              <div class="d-flex justify-content-between p-2">
+                <a href="#plan" class="btn" data-bs-toggle="collapse">
+                  <h3 class="fst-3">Product Planning</h3>
+                </a>
+                <div class="dropdown">
+                  <button type="button" class="btn" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">Create</li>
+                  </ul>
                 </div>
-                <!-- SECOND  -->
-                <div class="container p-3" id="body">
-                    <div id="title-header">
-                        <div class="d-flex justify-content-between p-2">
-                            <a href="#school" class="btn" data-bs-toggle="collapse">
-                                <h3 class="fst-3">
-                                    School
-                                </h3>
-                            </a>
-                            <div class="dropdown">
-                                <button type="button" class="btn" data-bs-toggle="dropdown">
-                                    <i class="fa-solid fa-ellipsis"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-item">
-                                        Create
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse" id="school" data-bs-parent="#accordion">
-                        <div id="title-body">
-                            <div class="row mt-3">
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div id="card">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="fs-6">Just Now</h5>
-                                            <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
-                                        </div>
-                                        <h3 class="fs-3 mt-2">
-                                            Brainstorming
-                                        </h3>
-                                        <div class="mt-1" id="card-body">
-                                            Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Molestias sit quas
-                                            distinctio modi odit. Voluptas expedita
-                                            blanditiis esse placeat?
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div id="card">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="fs-6">2 Months ago</h5>
-                                        </div>
-                                        <h3 class="fs-3 mt-2">
-                                            DevNote. Project Building
-                                        </h3>
-                                        <div class="mt-1" id="card-body">
-                                            Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Molestias sit quas
-                                            distinctio modi odit. Voluptas expedita
-                                            blanditiis esse placeat?
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-4 col-lg-4">
-                                    <div id="card">
-                                        <div class="d-flex justify-content-between">
-                                            <h5 class="fs-6">Just Now</h5>
-                                            <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
-                                        </div>
-                                        <h3 class="fs-3 mt-2">
-                                            Brainstorming
-                                        </h3>
-                                        <div class="mt-1" id="card-body">
-                                            Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Molestias sit quas
-                                            distinctio modi odit. Voluptas expedita
-                                            blanditiis esse placeat?
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </main>
+            <div class="collapse" id="plan" data-bs-parent="#accordion">
+              <div id="title-body">
+                <div class="row mt-3">
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div id="card">
+                      <div class="d-flex justify-content-between">
+                        <h5 class="fs-6">Just Now</h5>
+                        <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
+                      </div>
+                      <h3 class="fs-3 mt-2">Brainstorming</h3>
+                      <div class="mt-1" id="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias sit quas distinctio modi odit. Voluptas
+                        expedita blanditiis esse placeat?
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div id="card">
+                      <div class="d-flex justify-content-between">
+                        <h5 class="fs-6">2 Months ago</h5>
+                      </div>
+                      <h3 class="fs-3 mt-2">DevNote. Project Building</h3>
+                      <div class="mt-1" id="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias sit quas distinctio modi odit. Voluptas
+                        expedita blanditiis esse placeat?
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div id="card">
+                      <div class="d-flex justify-content-between">
+                        <h5 class="fs-6">Just Now</h5>
+                        <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
+                      </div>
+                      <h3 class="fs-3 mt-2">Brainstorming</h3>
+                      <div class="mt-1" id="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias sit quas distinctio modi odit. Voluptas
+                        expedita blanditiis esse placeat?
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div id="card">
+                      <div class="d-flex justify-content-between">
+                        <h5 class="fs-6">Just Now</h5>
+                        <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
+                      </div>
+                      <h3 class="fs-3 mt-2">Brainstorming</h3>
+                      <div class="mt-1" id="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias sit quas distinctio modi odit. Voluptas
+                        expedita blanditiis esse placeat?
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div id="card">
+                      <div class="d-flex justify-content-between">
+                        <h5 class="fs-6">2 Months ago</h5>
+                      </div>
+                      <h3 class="fs-3 mt-2">DevNote. Project Building</h3>
+                      <div class="mt-1" id="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias sit quas distinctio modi odit. Voluptas
+                        expedita blanditiis esse placeat?
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div id="card">
+                      <div class="d-flex justify-content-between">
+                        <h5 class="fs-6">Just Now</h5>
+                        <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
+                      </div>
+                      <h3 class="fs-3 mt-2">Brainstorming</h3>
+                      <div class="mt-1" id="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias sit quas distinctio modi odit. Voluptas
+                        expedita blanditiis esse placeat?
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SECOND  -->
+          <div class="container p-3" id="body">
+            <div id="title-header">
+              <div class="d-flex justify-content-between p-2">
+                <a href="#school" class="btn" data-bs-toggle="collapse">
+                  <h3 class="fst-3">School</h3>
+                </a>
+                <div class="dropdown">
+                  <button type="button" class="btn" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">Create</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="collapse" id="school" data-bs-parent="#accordion">
+              <div id="title-body">
+                <div class="row mt-3">
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div id="card">
+                      <div class="d-flex justify-content-between">
+                        <h5 class="fs-6">Just Now</h5>
+                        <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
+                      </div>
+                      <h3 class="fs-3 mt-2">Brainstorming</h3>
+                      <div class="mt-1" id="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias sit quas distinctio modi odit. Voluptas
+                        expedita blanditiis esse placeat?
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div id="card">
+                      <div class="d-flex justify-content-between">
+                        <h5 class="fs-6">2 Months ago</h5>
+                      </div>
+                      <h3 class="fs-3 mt-2">DevNote. Project Building</h3>
+                      <div class="mt-1" id="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias sit quas distinctio modi odit. Voluptas
+                        expedita blanditiis esse placeat?
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div id="card">
+                      <div class="d-flex justify-content-between">
+                        <h5 class="fs-6">Just Now</h5>
+                        <h5 class="badge rounded-pill bg-info fs-6">Work</h5>
+                      </div>
+                      <h3 class="fs-3 mt-2">Brainstorming</h3>
+                      <div class="mt-1" id="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias sit quas distinctio modi odit. Voluptas
+                        expedita blanditiis esse placeat?
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-
-
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

@@ -62,7 +62,6 @@ main{
 .header{
     background-color: white;
     padding: 20px;
-    position: fixed;
     width: 80%;
     top: 0;
     right: -10px;
@@ -76,7 +75,7 @@ main{
 
 
 .main.body{
-    margin-top: 14%;
+    /* margin-top: 14%; */
 }
 
 @media screen and (max-width : 480px) {
