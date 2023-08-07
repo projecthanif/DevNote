@@ -32,9 +32,4 @@ class Database
         return $this->statement->fetchALl(PDO::FETCH_ASSOC);
     }
 
-    public function post()
-    {
-        
-    }
-
 }

@@ -1,5 +1,5 @@
 <main>
-    <header class="header">
+    <header class="header w-100">
         <div class="d-flex justify-content-between">
             <h1 class="title-header mb-3 fst-italic" id="title">
                 <?= $heading ?>
@@ -25,7 +25,7 @@
 
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Launch demo modal
+                New
             </button>
 
             <!-- Modal -->
@@ -38,7 +38,9 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            ...
+                            <form action="/create" method="post">
+                                
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
