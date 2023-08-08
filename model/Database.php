@@ -1,7 +1,6 @@
 <?php
 
-namespace App;
-
+namespace Data;
 use PDO;
 use PDOException;
 
@@ -15,14 +14,18 @@ class Database
     {
         $dsn = 'mysql:' . http_build_query($config, "", ";");
 
-        $this->connection = new PDO($dsn, 'root', '');
-        // [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]
+        try {
+            $this->connection = new PDO($dsn, 'root', '');
+            // [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]
+        } catch (PDOException $e) {
+           echo "Connection failed due to: " . $e->getMessage() . " on line " . $e->getLine();
+        }
     }
 
-    public function query($query)
+    public function query($query, $param = null)
     {
         $this->statement = $this->connection->prepare($query);
-        $this->statement->execute();
+        $this->statement->execute($param);
 
         return $this;
     }

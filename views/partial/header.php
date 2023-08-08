@@ -38,7 +38,7 @@
                             <h3 class="fw-bold">Create Your Todo List</h3>
                         </div>
                         <div class="modal-body p-5">
-                            <form action="#" method="post">
+                            <form action="" method="post">
                                 <div class="form-group">
                                     <label for="title">Title
                                         <input type="text" name="title" id="" class="form-control" required />
@@ -47,19 +47,19 @@
                                         <input type="date" name="time" id="" class="form-control" />
                                     </label>
                                     <label for="Tag">Tag
-                                        <input type="text" name="Tag" id="" class="form-control w-50" />
+                                        <input type="text" name="tag" id="" class="form-control w-50" />
                                     </label>
+                                    <div class="form-group mb-3">
+                                        <label for="about">Message</label>
+                                        <textarea name="about" id="" cols="30" rows="10" class="form-control"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" value="create" name="create">
+                                        Create
+                                    </button>
+                                    <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal">
+                                        Cancel
+                                    </button>
                                 </div>
-                                <div class="form-group mb-3">
-                                    <label for="message">Message</label>
-                                    <textarea name="message" id="" cols="30" rows="10" class="form-control"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary" value="create">
-                                    Create
-                                </button>
-                                <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal">
-                                    Cancel
-                                </button>
                             </form>
                         </div>
                     </div>
