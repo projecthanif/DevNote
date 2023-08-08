@@ -41,22 +41,27 @@
                                                 <div class="form-group">
                                                     <label for="title">Title
                                                         <input type="text" name="title" id="" class="form-control" required
-                                                            placeholder="<?= $list['title'] ?>" />
+                                                            <!-- PHP -->
+                                                            placeholder="<?= $list['title'] ?>"
+                                                        />
                                                     </label>
                                                     <label for="time">Time
                                                         <input type="date" name="time" id="" class="form-control" />
                                                     </label>
                                                     <label for="Tag">Tag
                                                         <input type="text" name="Tag" id="" class="form-control w-50"
-                                                            placeholder="<?= $list['tag'] ?>" />
+                                                            <!-- PHP -->
+                                                            placeholder="<?= $list['tag'] ?>" 
+                                                        />
                                                     </label>
                                                 </div>
                                                 <div class="form-group mb-3">
                                                     <label for="message">Message</label>
                                                     <textarea name="message" id="" cols="30" rows="10" class="form-control">
+                                                        <!-- PHP -->
                                                         <?= $list['about'] ?>
                                                     </textarea>
-                                                </div>                                                                                              
+                                                </div>
                                                 <button type="button" class="btn btn-danger float-start"
                                                     data-bs-dismiss="modal">
                                                     Cancel

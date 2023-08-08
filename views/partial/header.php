@@ -4,6 +4,9 @@
             <h1 class="title-header mb-3 fst-italic" id="title">
                 <?= $heading ?>
             </h1>
+            <!-- <button class="btn" onclick="document.body.style.backgroundColor = 'red !important'">
+                <i class="fa fa-sun"></i>
+            </button> -->
             <div id="sidebar">
                 <button class="btn btn-primary">
                     <div class="fa fa-bars fa-1x"></div>

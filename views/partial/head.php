@@ -14,5 +14,5 @@
     <title>DevNote.</title>
 </head>
 
-<body class="bg-light">
+<body class="bg-light" id="body">
     <div class="container-fluid">

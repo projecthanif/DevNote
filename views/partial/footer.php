@@ -1,6 +1,7 @@
         </main>
     </div>
 
+<script src="/views/assets/js/app.js"></script>
 <script src="/views/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/views/bootstrap/dist/js/bootstrap.js"></script>
 <script src="/views/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
