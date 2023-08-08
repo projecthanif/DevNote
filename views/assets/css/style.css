@@ -119,5 +119,9 @@ main{
     background-color: rgb(245, 239, 239);
     padding: 20px;
     border-radius: 9px;
-    height: 40vh;
+    height: 44vh;
+}
+
+.card-footer button{
+    text-align: end;
 }

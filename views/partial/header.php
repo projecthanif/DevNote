@@ -22,51 +22,42 @@
                     <a href="#" class="nav-link">Links</a>
                 </li>
             </ul>
-
-            <!-- Button trigger modal -->
+            <!-- modal botton -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 New
             </button>
-
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+                aria-hidden="true" tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 class="fw-bold">CREATE YOUR LIST OF Work</h3>
+                            <h3 class="fw-bold">Create Your Todo List</h3>
                         </div>
                         <div class="modal-body p-5">
-                            <form action="backend/data_receiver.php" method="post">
+                            <form action="#" method="post">
                                 <div class="form-group">
                                     <label for="title">Title
-                                        <input type="text" name="title" id="" class="form-control" required>
+                                        <input type="text" name="title" id="" class="form-control" required />
                                     </label>
                                     <label for="time">Time
-                                        <input type="date" name="time" id="" class="form-control">
+                                        <input type="date" name="time" id="" class="form-control" />
                                     </label>
-                                    <label for="type">Type
-                                        <select name="type" id="type" class="form-select">
-                                            <option value="">Select</option>
-                                            <option value="important">Important</option>
-                                            <option value="work">Work</option>
-                                            <option value="errands">Errands</option>
-                                        </select>
+                                    <label for="Tag">Tag
+                                        <input type="text" name="Tag" id="" class="form-control w-50" />
                                     </label>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="message">Message</label>
-                                    <textarea name="message" id="" cols="30" rows="10" class="form-control">
-                                            </textarea>
+                                    <textarea name="message" id="" cols="30" rows="10" class="form-control"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary" value="create">Create</button>
-                                <button type="button" class="btn btn-danger float-end"
-                                    data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary" value="create">
+                                    Create
+                                </button>
+                                <button type="button" class="btn btn-danger float-end" data-bs-dismiss="modal">
+                                    Cancel
+                                </button>
                             </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                 </div>

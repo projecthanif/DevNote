@@ -9,8 +9,5 @@ $database = new Database($config['database']);
 
 $select = $database->query("Select * from todo")->fetchAll();
 
-// dd($select['TITLE']);
-
-
 
 require 'views/all.view.php';
