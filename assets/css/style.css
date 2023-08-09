@@ -33,11 +33,6 @@ ul.navProject {
     flex-direction: column; */
   padding: 10px;
 }
-.navheader {
-  font-size: 40px;
-  margin-left: 10px;
-  font-style: italic;
-}
 
 li.navitem > a.navlink {
   display: block;
@@ -81,7 +76,6 @@ a.nav-link {
   }
 }
 
-
 main,
 header {
   margin-left: 20%;
@@ -98,10 +92,13 @@ header {
   z-index: 1;
   position: fixed;
 }
-
+.navheader {
+  font-size: 30px;
+  margin-left: 10px;
+  font-style: italic;
+}
 #sidebar {
-  display: flex;
-  justify-content: space-around;
+  display: none;
 }
 
 #list {
@@ -118,106 +115,138 @@ header {
   border: 1px solid grey;
 }
 
+#toggle {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
 .item > .link:hover {
   box-shadow: 0px 0px 1px 2px aqua;
 }
 
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 10px;
+    right: 0px;
+    width: 100%;
+  }
+  .head {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin-left: 10px;
+  }
+  .navbar {
+    margin-left: 10px;
+    width: 70%;
+  }
+  #sidebar {
+    display:contents;
+  }
+}
 
+@media screen and (max-width: 480px) {
+  #list {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+}
 
 /** MAIN */
 main {
-    margin-top: 12%;
-}
-
-/** SECTION **/
-
-.section-body {
-    background-color: rgb(221, 232, 242);
-    padding: 10px;
-}
-
-.container {
-    padding: 20px;
-}
-
-.flex-container{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.card{
-    background-color: rgb(245, 239, 239);
-    padding: 20px;
-    border-radius: 9px;
-    width: 42vh;
-    height: 35vh;
-    margin-bottom: 20px;
-}
-
-.card-head {
-    display: flex;
-    justify-content: space-between;
-}
-
-.date {
-    padding: 5px;
-}
-
-.tag {
-    padding: 5px;
-    background-color: rgb(11, 97, 97);
-    border-radius: 10px;
-    color: white;
-
-}
-
-.card-title{
-    font-size: 20px;
-    font-weight: 100;
-    margin-top: 10px;
-}
-
-.card-body {
-    margin-top: 10px;
-    /* padding: 10px; */
-}
-
-.card-footer button{
-    text-align: end;
+  margin-top: 12%;
 }
 
 @media screen and (max-width: 480px) {
   main {
     margin-left: 0%;
+    margin-top: 30%;
   }
+}
+
+/** SECTION **/
+
+.section-body {
+  background-color: rgb(221, 232, 242);
+  padding: 10px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.flex-container {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: auto auto auto;
+  row-gap: 5px;
+  /* display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; */
+}
+
+.card {
+  background-color: rgb(245, 239, 239);
+  padding: 15px;
+  border-radius: 9px;
+  width: 42vh;
+  height: 35vh;
+  margin-bottom: 20px;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  padding: 5px;
+}
+
+.tag {
+  padding: 5px;
+  background-color: rgb(11, 97, 97);
+  border-radius: 10px;
+  color: white;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+.card-body {
+  margin-top: 10px;
+  /* padding: 10px; */
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  position: relative;
+  bottom: -10px;
+  text-align: start;
+}
+.card-footer .btn {
+  border: none;
+  padding: 2px;
+}
+#red {
+  color: red;
 }
 
 @media screen and (max-width: 480px) {
-  .header {
-    right: 0px;
-    width: 100%;
+  .body-section {
+    margin-top: 50px;
   }
-  .main.body {
-    margin-top: 30%;
-  }
-  #time .nav-item {
-    width: 25%;
-  }
-  #list {
-    width: 70%;
-  }
-  #list .nav-item {
-    width: 50%;
+  .flex-container {
+    display: grid;
+    place-content: center;
+    grid-template-columns: auto;
   }
 }
-
-@media screen and (min-width: 480px) {
-  #list {
-    width: 25%;
-  }
-  #sidebar {
-    display: none;
-  }
-}
-
