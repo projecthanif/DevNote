@@ -136,12 +136,56 @@ main {
     padding: 10px;
 }
 
+.container {
+    padding: 20px;
+}
+
 .flex-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
+.card{
+    background-color: rgb(245, 239, 239);
+    padding: 20px;
+    border-radius: 9px;
+    width: 42vh;
+    height: 35vh;
+    margin-bottom: 20px;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date {
+    padding: 5px;
+}
+
+.tag {
+    padding: 5px;
+    background-color: rgb(11, 97, 97);
+    border-radius: 10px;
+    color: white;
+
+}
+
+.card-title{
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+.card-body {
+    margin-top: 10px;
+    /* padding: 10px; */
+}
+
+.card-footer button{
+    text-align: end;
+}
 
 @media screen and (max-width: 480px) {
   main {
