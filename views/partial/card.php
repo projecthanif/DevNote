@@ -1,12 +1,15 @@
 <!-- CARD -->
 <div class="container p-3">
     <div class="row mt-3">
-        <?php foreach ($select as $list): 
+        <?php foreach ($select as  $list): 
             $tag = $list['tag'];
             $title = $list['title'];
             $about = $list['about'];
-        ?>
-            
+            $id = $list['id'];
+            // print_r($select);
+            // dd($list);
+
+            ?>
             <div class="col-sm-12 col-md-4 col-lg-4">
                 <div id="card">
                     <div class="d-flex justify-content-between">
@@ -81,7 +84,7 @@
                                     </div>
                                     <div class="modal-body p-5">
                                         <form action="#" method="post">
-                                            <input type="input" value="<?= $list['id'] ?>" name="id">
+                                            <input type="input" value="<?= $id ?>" name="id">
                                             <button type="submit" class="btn btn-primary" value="delete" name="delete">
                                                 Yes
                                             </button>
