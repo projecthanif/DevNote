@@ -190,7 +190,7 @@ main {
   padding: 20px;
 }
 
-.flex-container {
+.grid-container {
   display: grid;
   column-gap: 10px;
   grid-template-columns: auto auto auto;
@@ -254,7 +254,7 @@ main {
   .body-section {
     margin-top: 150px;
   }
-  .flex-container {
+  .grid-container {
     display: grid;
     place-content: center;
     grid-template-columns: auto;
@@ -266,4 +266,19 @@ main {
   .card-footer{
     bottom: -20px;
   }
+}
+
+
+#new>button {
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
+}
+
+.btn-new {
+  padding: 10px;
+  border-radius: 20px;
+  border:none;
+  background-color:  rgb(11, 97, 97);;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
