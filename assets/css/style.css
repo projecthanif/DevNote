@@ -26,6 +26,13 @@ aside {
   overflow: auto;
   top: 0;
 }
+#close {
+  display: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 50px;
+  border: none;
+}
 
 ul.aside-nav,
 ul.navProject {
@@ -184,17 +191,14 @@ main {
   column-gap: 10px;
   grid-template-columns: auto auto auto;
   row-gap: 5px;
-  /* display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; */
 }
 
 .card {
   background-color: rgb(245, 239, 239);
   padding: 15px;
   border-radius: 9px;
-  width: 42vh;
-  height: 35vh;
+  width: 45vh;
+  height: fit-content;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -244,7 +248,7 @@ main {
 
 @media screen and (max-width: 480px) {
   .body-section {
-    margin-top: 50px;
+    margin-top: 150px;
   }
   .flex-container {
     display: grid;
