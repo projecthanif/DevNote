@@ -202,7 +202,7 @@ main {
   padding: 15px;
   border-radius: 9px;
   width: 45vh;
-  height: fit-content;
+  height: 40vh;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -258,5 +258,8 @@ main {
     display: grid;
     place-content: center;
     grid-template-columns: auto;
+  }
+  .card {
+    height: 45vh;
   }
 }
