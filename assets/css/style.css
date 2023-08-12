@@ -154,7 +154,7 @@ header {
     width: 70%;
   }
   #sidebar {
-    display:contents;
+    display: contents;
   }
 }
 
@@ -201,8 +201,8 @@ main {
   background-color: rgb(245, 239, 239);
   padding: 15px;
   border-radius: 9px;
-  width: 45vh;
-  height: 40vh;
+  width: 280px;
+  height: 250px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -260,6 +260,7 @@ main {
     grid-template-columns: auto;
   }
   .card {
-    height: 45vh;
+    width: 250px;
+    height: 250px;
   }
 }
