@@ -16,4 +16,5 @@ function showNav() {
 
 function closeNav() {
     aside.style.display = 'none';
+    document.getElementById('header').style.zIndex = 1;
 }
