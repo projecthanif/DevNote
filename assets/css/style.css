@@ -239,7 +239,7 @@ main {
   justify-content: space-between;
   width: 25%;
   position: relative;
-  bottom: -10px;
+  bottom: -50px;
   text-align: start;
 }
 .card-footer .btn {
@@ -262,5 +262,8 @@ main {
   .card {
     width: 250px;
     height: 250px;
+  }
+  .card-footer{
+    bottom: -20px;
   }
 }
