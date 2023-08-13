@@ -31,4 +31,14 @@ $select = $database->query("Select * from todo")->fetchAll();
 
 $heading = "All Your Todo's";
 
+function loop($select) {
+    foreach ($select as $key) {
+        echo "<pre>";
+        var_dump($key);
+        echo "</pre>";
+    }
+}
+
+// dd(loop($select));
+
 require 'views/all.view.php';

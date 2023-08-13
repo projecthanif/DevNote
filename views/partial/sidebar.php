@@ -1,54 +1,39 @@
+<!------------------SIDE NAV---------------------------->
 <aside id="nav-column">
-    <ul class="nav flex-column">
-        <li class="nav-header mb-3 fst-italic">
-            <a href="/" class="nav-link">
-                <h2>
-                    DevNote.
-                </h2>
-            </a>
-        </li>
-        <li class="nav-item" id="mt-5">
-            <a href="/all" class="nav-link">
-                <i class="fa-solid fa-border-all"></i>
-                Overview
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="/today" class="nav-link">
-                <i class="fa-regular fa-calendar"></i>
-                Today
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="fa-regular fa-clock"></i>
-                In Progress
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="/done" class="nav-link">
-                <i class="fa-solid fa-check"></i>
-                Completed
-            </a>
-        </li>
-
-        <ul class="nav project">
-            <h5 class="mt-5 mx-5 text-black-50">PROJECTS</h5>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="fa-solid fa-bars"></i>
-                    Ongoing project
+    <nav id="aside">
+        <ul class="aside-nav">
+            <li class="navhead">
+                <a href="/" class="navlink">
+                    <h2 class="navheader">DevNote.</h2>
+                </a>
+                <button id="close" onclick="closeNav(aside)">
+                    <i class="fa fa-close"></i>
+                </button>
+            </li>
+            <li class="navitem active" id="mt-5">
+                <a href="/all" class="navlink">
+                    <i class="fa-solid fa-border-all"></i>
+                    Overview
+                </a>
+            </li>
+            <li class="navitem">
+                <a href="/today" class="navlink">
+                    <i class="fa-regular fa-calendar"></i>
+                    Today
+                </a>
+            </li>
+            <li class="navitem">
+                <a href="#" class="navlink">
+                    <i class="fa-regular fa-clock"></i>
+                    In Progress
+                </a>
+            </li>
+            <li class="navitem">
+                <a href="/done" class="navlink">
+                    <i class="fa-solid fa-check"></i>
+                    Completed
                 </a>
             </li>
         </ul>
-        <ul class="nav">
-            <h5 class="mt-5 mx-5 text-black-50">PERSONAL</h5>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="fa-solid fa-bars"></i>
-                    Ongoing project
-                </a>
-            </li>
-        </ul>
-    </ul>
+    </nav>
 </aside>

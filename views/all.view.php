@@ -1,9 +1,21 @@
 <?php require 'partial/head.php' ?>
-<!------------------SIDE NAV---------------------------->
 
 <?php require 'partial/sidebar.php' ?>
+
 <?php require 'partial/header.php' ?>
-<div id="accordion" class="main body">
-    <?php require 'partial/card.php' ?>
-</div>
+
+<main>
+    <section class="body-section">
+        <div class="container">
+            <div class="grid-container">
+                <?php foreach ($select as $list) : ?>
+
+                    <?php require 'views/partial/card.php' ?>
+
+                <?php endforeach ?>
+            </div>
+        </div>
+    </section>
+</main>
+
 <?php require 'partial/footer.php' ?>
