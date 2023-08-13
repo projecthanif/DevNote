@@ -2,7 +2,8 @@ let toggle = document.getElementById("toggle");
 let aside  = document.getElementById('nav-column');
 let newTodo = document.getElementById("new");
 let newList = document.getElementById("create");
-
+let updateTodo = document.getElementById("update");
+let deleteList = document.getElementById("delete");
 
 function showNav() {
     aside.style.display = 'block';
@@ -22,9 +23,21 @@ function closeNav(type) {
 
 function create() {
     newList.style.display = 'block';
-    // body.style.backgroundColor = 'white'
     newList.style.zIndex = 1;
-    // document.getElementById('create').style.display = 'inline'
+    document.getElementById('header').style.zIndex = -1;
+    console.log('Hello World');
+}
+
+function update() {
+    updateTodo.style.display = 'block';
+    updateTodo.style.zIndex = 1;
+    document.getElementById('header').style.zIndex = -1;
+    console.log('Hello World');
+}
+
+function deleteTodo() {
+    deleteList.style.display = 'block';
+    deleteList.style.zIndex = 1;
     document.getElementById('header').style.zIndex = -1;
     console.log('Hello World');
 }

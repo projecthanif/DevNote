@@ -358,4 +358,11 @@ button.btn {
     width: 90% !important;
     padding: 10px !important;
   }
+  #update, #delete {
+    margin-left: -10%;
+  }
+  #delete {
+    padding: 10px;
+    top: 20%;
+  }
 }
