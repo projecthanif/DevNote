@@ -246,6 +246,9 @@ main {
   border: none;
   padding: 2px;
 }
+.fa-pen {
+  color: black;
+}
 #red {
   color: red;
 }
@@ -348,6 +351,10 @@ button.btn {
   margin-top: 10px;
 }
 
+#delete {
+  padding: 10px;
+  top: 20%;
+}
 
 @media screen and (max-width:480px) {
   .modal {
@@ -360,9 +367,5 @@ button.btn {
   }
   #update, #delete {
     margin-left: -10%;
-  }
-  #delete {
-    padding: 10px;
-    top: 20%;
   }
 }

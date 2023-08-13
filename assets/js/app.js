@@ -16,11 +16,6 @@ function showNav() {
     console.log('Hello World');
 }
 
-function closeNav(type) {
-    type.style.display = 'none';
-    document.getElementById('header').style.zIndex = 1;
-}
-
 function create() {
     newList.style.display = 'block';
     newList.style.zIndex = 1;
@@ -40,4 +35,10 @@ function deleteTodo() {
     deleteList.style.zIndex = 1;
     document.getElementById('header').style.zIndex = -1;
     console.log('Hello World');
+}
+
+
+function closeNav(type) {
+    type.style.display = 'none';
+    document.getElementById('header').style.zIndex = 1;
 }
