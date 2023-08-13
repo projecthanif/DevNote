@@ -15,13 +15,13 @@
     <!------------------SIDE NAV---------------------------->
     <div class="container-body">
       <aside id="nav-column">
-        <nav  id="aside">
+        <nav id="aside">
           <ul class="aside-nav">
             <li class="navhead">
               <a href="index.html" class="navlink">
                 <h2 class="navheader">DevNote.</h2>
               </a>
-              <button id="close" onclick="closeNav()">
+              <button id="close" onclick="closeNav(aside)">
                 <i class="fa fa-close"></i>
               </button>
             </li>
@@ -58,7 +58,7 @@
         <div class="head">
           <h1 class="navheader" id="title">All Your Todo's</h1>
           <div id="sidebar">
-            <button id="toggle" onclick="showNav()">
+            <button id="toggle" onclick="showNav(aside)">
               <i class="fa fa-bars fa-1x"></i>
             </button>
           </div>
@@ -110,13 +110,84 @@
             </div>
           </div>
         </section>
-        <section id="new">
-          <button class="btn-new">
-            <i class="fa fa-plus"></i>
+        <section>
+          <button class="btn-new" id="new" onclick="create()">
+            <i class="fa fa-plus" title="create"></i>
           </button>
-          <form action="#" method="post">
-            
-          </form>
+          <!-- Modal Form -->
+          <div class="modal" id="create">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title">Create Your Todo List</h3>
+              </div>
+              <div class="modal-body">
+                <form action="#" method="post">
+                  <div class="form-group">
+                    <label for="title"
+                      >Title
+                      <input
+                        type="text"
+                        name="title"
+                        id=""
+                        class="form-control"
+                        required
+                        placeholder=""
+                      />
+                    </label>
+                    <label for="time"
+                      >Time
+                      <input
+                        type="date"
+                        name="time"
+                        id=""
+                        class="form-control time"
+                      />
+                    </label>
+                    <br />
+                    <label for="Tag"
+                      >Tag
+                      <input
+                        type="text"
+                        name="Tag"
+                        id=""
+                        class="form-control w-50"
+                        placeholder=""
+                      />
+                    </label>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="message"
+                      >Message
+                      <textarea
+                        name="message"
+                        id=""
+                        cols="30"
+                        rows="10"
+                        class="form-control"
+                      ></textarea>
+                    </label>
+                  </div>
+                  <div class="button">
+                    <button
+                    type="button"
+                    class="btn red"
+                    data-bs-dismiss="modal" 
+                    onclick="closeNav(newList)"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn blue"
+                    value="create"
+                  >
+                    Update
+                  </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>

@@ -1,6 +1,7 @@
 let toggle = document.getElementById("toggle");
 let aside  = document.getElementById('nav-column');
-
+let newTodo = document.getElementById("new");
+let newList = document.getElementById("create");
 
 
 function showNav() {
@@ -14,7 +15,16 @@ function showNav() {
     console.log('Hello World');
 }
 
-function closeNav() {
-    aside.style.display = 'none';
+function closeNav(type) {
+    type.style.display = 'none';
     document.getElementById('header').style.zIndex = 1;
+}
+
+function create() {
+    newList.style.display = 'block';
+    // body.style.backgroundColor = 'white'
+    newList.style.zIndex = 1;
+    // document.getElementById('create').style.display = 'inline'
+    document.getElementById('header').style.zIndex = -1;
+    console.log('Hello World');
 }
