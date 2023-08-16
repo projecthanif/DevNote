@@ -9,7 +9,7 @@
                 <h3 class="modal-title">Create Your Todo List</h3>
             </div>
             <div class="modal-body">
-                <form action="#" method="post">
+                <form action="/create" method="post">
                     <div class="form-group">
                         <label for="title">Title
                             <input type="text" name="title" id="" class="form-control" required placeholder="" />
@@ -19,7 +19,7 @@
                         </label>
                         <br />
                         <label for="Tag">Tag
-                            <input type="text" name="Tag" id="" class="form-control w-50" placeholder="" />
+                            <input type="text" name="tag" id="" class="form-control w-50" placeholder="" />
                         </label>
                     </div>
                     <div class="form-group mb-3">
@@ -31,8 +31,8 @@
                         <button type="button" class="btn red" data-bs-dismiss="modal" onclick="closeNav(newList)">
                             Cancel
                         </button>
-                        <button type="submit" class="btn blue" value="create">
-                            Update
+                        <button type="submit" class="btn blue" name="create">
+                            Create
                         </button>
                     </div>
                 </form>

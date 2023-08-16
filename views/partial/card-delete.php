@@ -1,7 +1,7 @@
 <article>
     <div class="modal" id="delete">
         <div class="modal-header">
-            <h3 class="modal-title">Delete Your Todo List</h3>
+            <h3 class="modal-title">Delete Your Todo List <?= $list['id'] ?></h3>
         </div>
         <div class="button">
             <button type="button" class="btn red" data-bs-dismiss="modal" onclick="closeNav(deleteList)">

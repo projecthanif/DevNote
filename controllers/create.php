@@ -1,5 +1,6 @@
 <?php
 
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['create'])) {
         require 'model/Create.php';
@@ -10,11 +11,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         $title = $create->filter($_POST['title']);
         $tag = $create->filter($_POST['tag']);
-        $about = $create->filter($_POST['about']);
+        $about = $create->filter($_POST['message']);
 
-        $create->query(
-            "INSERT INTO todo(title, tag, about) VALUE(:title, :tag, :about)",
-            ['title' => $title, 'tag' => $tag, 'about' => $about]
-        );
+        if (!empty($title && $tag && $about)) {
+            $create->query(
+                "INSERT INTO todo(title, tag, about) VALUE(:title, :tag, :about)",
+                ['title' => $title, 'tag' => $tag, 'about' => $about]
+            );
+        }
+        dd("mane");
     }
 }

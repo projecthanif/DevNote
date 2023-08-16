@@ -5,5 +5,5 @@ return [
     '/all' => 'controllers/all.php',
     '/today' => 'controllers/today.php',
     '/done' => 'controllers/done.php',
-    // '/create' => 'controllers/create.php'
+    '/create' => 'controllers/create.php'
 ];
