@@ -26,4 +26,4 @@ $url = parse_url($_SERVER["REQUEST_URI"])["path"];
 
 $route = new Route();
 
-$routePath = $route-> router($url,$path);
+$routePath = $route->router($url, $path);
