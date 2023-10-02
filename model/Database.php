@@ -37,7 +37,7 @@ class Database
 
     public function fetchAll()
     {
-        return $this->statement->fetchALl(PDO::FETCH_ASSOC);
+        return $this->statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
 }
